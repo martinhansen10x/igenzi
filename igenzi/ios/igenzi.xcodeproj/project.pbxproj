@@ -19,6 +19,7 @@
 		608CFEB1366E6E3989B0304F /* libPods-igenzi-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 489009B9B41E0869FF5BABE7 /* libPods-igenzi-tvOSTests.a */; };
 		72EB40DD2E584EF6E7F982BB /* libPods-igenzi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9413E69E7A8342E1689CF291 /* libPods-igenzi.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9F4AA64F24C3305800937094 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 9F4AA64E24C3305800937094 /* Fonts */; };
 		C7E0C1385A7D83C5F059BBBA /* libPods-igenzi-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8957BD3AB2A03BF5C1EB49A6 /* libPods-igenzi-tvOS.a */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		8957BD3AB2A03BF5C1EB49A6 /* libPods-igenzi-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-igenzi-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9413E69E7A8342E1689CF291 /* libPods-igenzi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-igenzi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0F04736A67206ACB293F25 /* Pods-igenzi-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-igenzi-tvOS.release.xcconfig"; path = "Target Support Files/Pods-igenzi-tvOS/Pods-igenzi-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		9F4AA64E24C3305800937094 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
 		C1719B1A701F8A8AF1CD87C2 /* Pods-igenzi-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-igenzi-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-igenzi-tvOS/Pods-igenzi-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -161,7 +163,6 @@
 				62DCF44965D5F0A2E9BFA7D6 /* Pods-igenzi-tvOSTests.debug.xcconfig */,
 				214080133C21077F26D562FD /* Pods-igenzi-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -175,6 +176,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				9F4AA64E24C3305800937094 /* Fonts */,
 				13B07FAE1A68108700A75B9A /* igenzi */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* igenziTests */,
@@ -340,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F4AA64F24C3305800937094 /* Fonts in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
