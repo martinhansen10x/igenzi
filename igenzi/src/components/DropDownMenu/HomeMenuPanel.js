@@ -27,11 +27,11 @@ const styles = StyleSheet.create({
     menuPanelContainer: {
         justifyContent: 'flex-start',
         height: Metrics.screenHeight * 0.75,
-        backgroundColor: Colors.circleMenu.time,
+        backgroundColor: Colors.primaryColors.black,
       },
       text: {
-        fontSize: 17,
-        color: 'black',
+        fontSize: 12,
+        color: Colors.primaryColors.silver,
         padding: 10,
       },
       iconContainer:{

@@ -34,6 +34,7 @@ export default {
     silver: SILVER,
     gray: GRAY,
     charcoal: CHARCOAL,
+    powderblue: POWDER_BLUE,
 
 
   }
