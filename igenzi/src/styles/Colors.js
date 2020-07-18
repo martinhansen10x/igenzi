@@ -13,7 +13,10 @@ const BLOOD_ORANGE = '#FF5B32'
 const JOKER_PURPLE = '#8A39FF'
 const FIRE_ORANGE = '#FF6A00'
 const ROSSO_CORSA = '#E74C3C'
-
+const BLACK = '#000000'
+const WHITE = '#FFFFFF'
+const SILVER = '#C0C0C0'
+const GRAY = '#808080'
 
 export default {
   circleMenu: {
@@ -24,4 +27,12 @@ export default {
     navigate: FIRE_ORANGE,
     background: ROSSO_CORSA,
   },
+  primaryColors: {
+    black: BLACK,
+    white: WHITE,
+    silver: SILVER,
+    gray: GRAY,
+
+
+  }
 }

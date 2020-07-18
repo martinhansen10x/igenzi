@@ -9,16 +9,24 @@
 import React from 'react'
 import {
   SafeAreaView,
-  Text,
 } from 'react-native'
-import { ParentStyles, FontStyles } from './styles'
-import HomeMenu from './components/HomeMenu'
-import CircleMenu from './components/CircleMenu'
+import { ParentStyles } from './styles'
+import DropDownMenu from './components/DropDownMenu/DropDownMenu'
+import TitleStatusBar from './components/TitleStatusBar/TItleStatusBar'
+import TribesCarousel from './components/TribesCarousel/TribesCarousel'
+import NotificationsBar from './components/NotificationsBar/NotificationsBar'
+import StatusUpdatesBar from './components/StatusUpdatesBar/StatusUpdatesBar'
+import InsightsSummary from './components/InsightsSummary/InsightsSummary'
+
 function App() {
   return (
     <SafeAreaView style = {ParentStyles.container}>
-      <Text style={FontStyles.ios.bold}>Welcome to igenzi</Text>
-      <HomeMenu/>
+      <DropDownMenu/> 
+      <TitleStatusBar/>
+      <TribesCarousel />
+      <NotificationsBar/>
+      <InsightsSummary/>
+      <StatusUpdatesBar/>
     </SafeAreaView>
   )
 }
