@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import {Text, View, StyleSheet } from 'react-native'
 import {Metrics, Colors } from '../../styles/'
+import CarouselComponent  from './carousel'
 
 class TribesCarousel extends Component {
 
     render() {
         return (
-          <View style={styles.statusBarContainer}>
-              <Text style={styles.btnText}>Tribes Carousel Content Goes Here, Maybe Inside a collapsible scroll header view?</Text>
+          <View style={styles.tribesCarouselContainer}>
+              <CarouselComponent/>
             </View>
         )
       }
@@ -22,12 +23,9 @@ const styles = StyleSheet.create({
       color: 'white',
       fontSize: 20,
     },
-    statusBarContainer: {
-      paddingVertical: 20,
-      borderWidth: 1,
-      borderColor: 'rgba(0,0,0,0.5)',
-      height: Metrics.screenHeight * 0.28,
-      backgroundColor: Colors.circleMenu.search,
+    tribesCarouselContainer: {
+      height: Metrics.screenHeight * 0.25,
+      backgroundColor: Colors.primaryColors.black,
     },
 
   })

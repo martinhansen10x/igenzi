@@ -17,6 +17,7 @@ const BLACK = '#000000'
 const WHITE = '#FFFFFF'
 const SILVER = '#C0C0C0'
 const GRAY = '#808080'
+const CHARCOAL = '#36454f'
 
 export default {
   circleMenu: {
@@ -32,6 +33,7 @@ export default {
     white: WHITE,
     silver: SILVER,
     gray: GRAY,
+    charcoal: CHARCOAL,
 
 
   }

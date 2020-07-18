@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {Text, View, StyleSheet, LayoutAnimation, Platform, UIManager, TouchableOpacity } from 'react-native'
 import HeaderBar from './HeaderBar'
 import HomeMenuPanel from './HomeMenuPanel'
+import { Colors } from "../../styles";
 
 class DropDownMenu extends Component {
 
@@ -51,12 +52,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   headerContainer: {
-    borderWidth: 1,
-    borderColor: 'rgba(0,0,0,0.5)'
+    borderBottomWidth: 1,
+    borderBottomColor: Colors.primaryColors.gray,
   },
   btn:{
-    padding: 10,
-    backgroundColor: 'rgba(0,0,0,0.5)',
+    backgroundColor: Colors.primaryColors.black,
   },
 
 })

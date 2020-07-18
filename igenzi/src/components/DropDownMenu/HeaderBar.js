@@ -1,15 +1,18 @@
 import React, { Component } from "react";
-import {Text, View, StyleSheet } from 'react-native'
+import {Text, View, StyleSheet, Image } from 'react-native'
 import {Metrics, Colors } from '../../styles/'
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 class HeaderBar extends Component {
 
     render() {
         return (
           <View style={styles.headerContainer}>
-              <Text style={styles.btnText}>HEADER PANEL GOES HERE</Text>
+          <Image style={styles.centreLogo}
+          source = {require('../../assets/images/igenziAppHeaderLogo.png')}/>
+          <Icon name="caret-down-sharp" size={30} color= {Colors.primaryColors.gray} />
             </View>
+
         )
       }
 
@@ -24,9 +27,13 @@ const styles = StyleSheet.create({
       fontSize: 20,
     },
     headerContainer: {
-      borderWidth: 1,
-      borderColor: 'rgba(0,0,0,0.5)',
-      height: Metrics.screenHeight * 0.05,
+      alignItems: 'center',
+      backgroundColor: Colors.primaryColors.black,
     },
+    centreLogo: {
+        width: 75,
+        height: 75,
+        resizeMode: 'stretch',
+    }
 
   })
