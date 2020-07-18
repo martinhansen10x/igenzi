@@ -19,6 +19,7 @@ import StatusUpdatesBar from './components/StatusUpdatesBar/StatusUpdatesBar'
 import InsightsSummary from './components/InsightsSummary/InsightsSummary'
 
 function App() {
+
   return (
     <SafeAreaView style = {ParentStyles.container}>
       <DropDownMenu/> 
