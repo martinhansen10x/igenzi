@@ -105,6 +105,22 @@ const genericFontStyles = StyleSheet.create({
       },
     }),
   },
+  buttons: {
+    ...Platform.select({
+      ios: {
+        ...sanFranciscoWeights.bold,
+        fontSize: 12,
+      },
+      android: {
+        ...robotoWeights.bold,
+        fontSize: 12,
+      },
+      default: {
+        ...systemWeights.bold,
+        fontSize: 12,
+      },
+    }),
+  },
 })
 
 const fontFamilies = StyleSheet.create({
@@ -123,7 +139,7 @@ export default {
     title: genericFontStyles.medium,
     subtitle: genericFontStyles.regular,
     body: genericFontStyles.regular,
-    buttons: genericFontStyles.bold,
+    buttons: genericFontStyles.buttons,
     labels: genericFontStyles.medium,
     input: genericFontStyles.regular,
     currency: genericFontStyles.bold,

@@ -17,17 +17,16 @@ import TribesCarousel from './components/TribesCarousel/TribesCarousel'
 import NotificationsBar from './components/NotificationsBar/NotificationsBar'
 import StatusUpdatesBar from './components/StatusUpdatesBar/StatusUpdatesBar'
 import InsightsSummary from './components/InsightsSummary/InsightsSummary'
-
+import LoginTitleMenuBar from './components/LoginPanels/LoginTitleMenuBar'
+import LoginDropDownMenu from './components/LoginPanels/LoginDropDownMenu'
+import RegisterDropDownMenu from './components/LoginPanels/RegisterDropDownMenu'
 function App() {
 
   return (
     <SafeAreaView style = {ParentStyles.container}>
-      <DropDownMenu/> 
-      <TitleStatusBar/>
-      <TribesCarousel />
-      <NotificationsBar/>
-      <InsightsSummary/>
-      <StatusUpdatesBar/>
+      <LoginTitleMenuBar/> 
+      <LoginDropDownMenu/>
+      <RegisterDropDownMenu/>
     </SafeAreaView>
   )
 }
