@@ -10,7 +10,7 @@ import NextArrowButton from '../Buttons/NextArrowButton'
 import ActivityLoaderModal from '../ActivityLoader/ActivityLoaderModal'
 import * as RootNavigation from '../../navigation/RootNavigation'
 
-class LoginPanelEmailPassword extends Component {
+class RegisterAccount extends Component {
 
     constructor(props){
         super(props)
@@ -18,12 +18,12 @@ class LoginPanelEmailPassword extends Component {
             formValid: true,
             validEmail: false,
             emailAddress: '',
-            password: '',
-            validPassword: false,
+            inviteCode: '',
+            validCode: false,
             loadingVisible: false,
         }
         this.handleEmailChange = this.handleEmailChange.bind(this)
-        this.handlePasswordChange = this.handlePasswordChange.bind(this)
+        this.handleCodeChange = this.handleCodeChange.bind(this)
         this.toggleNextButtonState = this.toggleNextButtonState.bind(this)
         this.handleNextButton = this.handleNextButton.bind(this)
     }
@@ -41,21 +41,21 @@ class LoginPanelEmailPassword extends Component {
         }
     }
 
-    handlePasswordChange(password) {
-        const {validPassword} = this.state
-        this.setState ({ password })
-            if (password.length > 4){
-                //todo - add password complexity enforcement minimum length, has symbol, mixed case, number
-                this.setState({validPassword: true})
+    handleCodeChange(inviteCode) {
+        const {validCode} = this.state
+        this.setState ({ inviteCode: inviteCode })
+            if (inviteCode === "1234"){
+                //todo - verify the code against the server here
+                this.setState({validCode: true})
             }
             else {
-                this.setState({validPassword: false})
+                this.setState({validCode: false})
             }
     }
 
     toggleNextButtonState(){
-        const { validEmail, validPassword} = this.state
-        if (validEmail && validPassword){
+        const { validEmail, validCode} = this.state
+        if (validEmail && validCode){
             return false
         }
         return true
@@ -65,8 +65,8 @@ class LoginPanelEmailPassword extends Component {
         this.setState({loadingVisible: true})
         //simulate the login result for now
         setTimeout(() => {
-            const { emailAddress, password } = this.state
-            if (emailAddress === 'test@igenzi.com' && password === 'igenzi'){
+            const { emailAddress, inviteCode } = this.state
+            if (emailAddress === 'test@igenzi.com' && inviteCode=== '1234'){
                 this.setState({formValid: true, loadingVisible: false})
                 //navigate to setPincode Panel
                 RootNavigation.navigate('TribesLanding')
@@ -78,7 +78,7 @@ class LoginPanelEmailPassword extends Component {
     }
 
     render () {
-        const { validEmail, validPassword, loadingVisible} = this.state
+        const { validEmail, validCode, loadingVisible} = this.state
 
         return (
             <View style={styles.LoginPanelContainer}>
@@ -100,15 +100,15 @@ class LoginPanelEmailPassword extends Component {
                     textAlignVertical = {'top'}
                 />
                      <ValidatedInputField
-                    labelText={"PASSWORD"}
+                    labelText={"INVITE CODE"}
                     labelTextSize={14}
                     labelColor={Colors.primaryColors.silver}
                     textColor={Colors.primaryColors.white}
                     borderBottomColor={Colors.primaryColors.powderblue}
-                    inputType="password"
+                    inputType="text"
                     customStyle={{marginBottom:30}}
-                    onChangeText={this.handlePasswordChange}
-                    showCheckmark={validPassword}
+                    onChangeText={this.handleCodeChange}
+                    showCheckmark={validCode}
                     autoFocus={false}
                     autoCapitalize={'none'}
                     multiline={false}
@@ -131,7 +131,7 @@ class LoginPanelEmailPassword extends Component {
     }
 }
 
-module.exports = LoginPanelEmailPassword
+module.exports = RegisterAccount
 
 const styles = StyleSheet.create({
     LoginPanelContainer: {

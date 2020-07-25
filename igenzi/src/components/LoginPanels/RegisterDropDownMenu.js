@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import {Text, View, StyleSheet, LayoutAnimation, Platform, UIManager, Keyboard } from 'react-native'
+import {View, StyleSheet, LayoutAnimation, Platform, UIManager, Keyboard } from 'react-native'
 import LoginMenuBar from './LoginMenuBar'
-import LoginPanelEmailPassword from './LoginPanelEmailPassword'
+import RegisterAccount from './RegisterAccount'
 import { Colors } from "../../styles";
 
 class RegisterDropDownMenu extends Component {
@@ -30,7 +30,7 @@ class RegisterDropDownMenu extends Component {
           handleNextButton={this.changeLayout}
           />
         <View style={{ height : this.state.expanded ? null : 0, overflow:'hidden'}}>
-          <LoginPanelEmailPassword/>
+          <RegisterAccount/>
         </View>
       </View>
       </View>

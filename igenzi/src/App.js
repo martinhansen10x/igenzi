@@ -7,27 +7,25 @@
  */
 
 import React from 'react'
-import {
-  SafeAreaView,
-} from 'react-native'
-import { ParentStyles } from './styles'
-import DropDownMenu from './components/DropDownMenu/DropDownMenu'
-import TitleStatusBar from './components/TitleStatusBar/TItleStatusBar'
-import TribesCarousel from './components/TribesCarousel/TribesCarousel'
-import NotificationsBar from './components/NotificationsBar/NotificationsBar'
-import StatusUpdatesBar from './components/StatusUpdatesBar/StatusUpdatesBar'
-import InsightsSummary from './components/InsightsSummary/InsightsSummary'
-import LoginTitleMenuBar from './components/LoginPanels/LoginTitleMenuBar'
-import LoginDropDownMenu from './components/LoginPanels/LoginDropDownMenu'
-import RegisterDropDownMenu from './components/LoginPanels/RegisterDropDownMenu'
+
+import { NavigationContainer } from '@react-navigation/native'
+import { navigationRef } from './navigation/RootNavigation'
+import { createStackNavigator } from '@react-navigation/stack'
+import AuthIndex from './modules/Auth/AuthIndex'
+import TribesLanding from './modules/Tribes/TribesLanding'
+
+const Stack = createStackNavigator()
+
 function App() {
 
   return (
-    <SafeAreaView style = {ParentStyles.container}>
-      <LoginTitleMenuBar/> 
-      <LoginDropDownMenu/>
-      <RegisterDropDownMenu/>
-    </SafeAreaView>
+    <NavigationContainer ref={navigationRef}>
+      <Stack.Navigator>
+        <Stack.Screen name="AuthIndex" component={AuthIndex} options={{headerShown: false}} />
+        <Stack.Screen name="TribesLanding" component={TribesLanding} options={{headerShown: false}} />
+      </Stack.Navigator>
+    </NavigationContainer>
+   
   )
 }
 
