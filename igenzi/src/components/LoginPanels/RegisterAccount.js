@@ -7,8 +7,8 @@ import {
 import {Colors, FontStyles, Metrics } from '../../styles/'
 import ValidatedInputField from '../TextFields/ValidatedInputField'
 import NextArrowButton from '../Buttons/NextArrowButton'
-import ActivityLoaderModal from '../ActivityLoader/ActivityLoaderModal'
 import * as RootNavigation from '../../navigation/RootNavigation'
+import Spinner from 'react-native-loading-spinner-overlay'
 
 class RegisterAccount extends Component {
 
@@ -69,12 +69,12 @@ class RegisterAccount extends Component {
             if (emailAddress === 'test@igenzi.com' && inviteCode=== '1234'){
                 this.setState({formValid: true, loadingVisible: false})
                 //navigate to setPincode Panel
-                RootNavigation.navigate('TribesLanding')
+                RootNavigation.navigate('SMS2FA')
             } else {
                 this.setState({formValid: false, loadingVisible: false})
                 //show the error drop down notification toaster
             }
-        }, 1500)
+        }, 3000)
     }
 
     render () {
@@ -120,12 +120,10 @@ class RegisterAccount extends Component {
                     handleNextButton={this.handleNextButton}
                     disabled={this.toggleNextButtonState()}
                 />
-                <ActivityLoaderModal
-                modalVisible={loadingVisible}
-                disabled={this.toggleNextButtonState}
-                >
-
-                </ActivityLoaderModal>
+                <Spinner
+                visible={loadingVisible}
+                textContent={'One moment...'}
+                textStyle={{ color: Colors.primaryColors.white }} />
             </View>
         )
     }

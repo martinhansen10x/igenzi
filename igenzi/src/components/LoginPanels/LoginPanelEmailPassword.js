@@ -1,14 +1,13 @@
 import React, {Component} from 'react'
 import {
-    Text,
     View,
     StyleSheet,
 } from 'react-native'
 import {Colors, FontStyles, Metrics } from '../../styles/'
 import ValidatedInputField from '../TextFields/ValidatedInputField'
 import NextArrowButton from '../Buttons/NextArrowButton'
-import ActivityLoaderModal from '../ActivityLoader/ActivityLoaderModal'
 import * as RootNavigation from '../../navigation/RootNavigation'
+import Spinner from 'react-native-loading-spinner-overlay'
 
 class LoginPanelEmailPassword extends Component {
 
@@ -69,12 +68,12 @@ class LoginPanelEmailPassword extends Component {
             if (emailAddress === 'test@igenzi.com' && password === 'igenzi'){
                 this.setState({formValid: true, loadingVisible: false})
                 //navigate to setPincode Panel
-                RootNavigation.navigate('TribesLanding')
+                RootNavigation.navigate('SMS2FA')
             } else {
                 this.setState({formValid: false, loadingVisible: false})
                 //show the error drop down notification toaster
             }
-        }, 1500)
+        }, 3000)
     }
 
     render () {
@@ -120,12 +119,10 @@ class LoginPanelEmailPassword extends Component {
                     handleNextButton={this.handleNextButton}
                     disabled={this.toggleNextButtonState()}
                 />
-                <ActivityLoaderModal
-                modalVisible={loadingVisible}
-                disabled={this.toggleNextButtonState}
-                >
-
-                </ActivityLoaderModal>
+                 <Spinner
+                visible={loadingVisible}
+                textContent={'One moment...'}
+                textStyle={{ color: Colors.primaryColors.white }} />
             </View>
         )
     }

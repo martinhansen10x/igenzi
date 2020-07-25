@@ -11,6 +11,7 @@ const POWDER_BLUE  = '#298CFF'
 const APPLE_GREEN  = '#30A400'
 const BLOOD_ORANGE = '#FF5B32'
 const JOKER_PURPLE = '#8A39FF'
+const LIGHT_PURPLE = '#744BAC'
 const FIRE_ORANGE = '#FF6A00'
 const ROSSO_CORSA = '#E74C3C'
 const BLACK = '#000000'
@@ -35,6 +36,7 @@ export default {
     gray: GRAY,
     charcoal: CHARCOAL,
     powderblue: POWDER_BLUE,
+    lightpurple: LIGHT_PURPLE,
 
 
   }
