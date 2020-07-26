@@ -15,7 +15,7 @@ import LoginTitleMenuBar from '../../components/LoginPanels/LoginTitleMenuBar'
 import LoginDropDownMenu from '../../components/LoginPanels/LoginDropDownMenu'
 import RegisterDropDownMenu from '../../components/LoginPanels/RegisterDropDownMenu'
 
-class TribesLanding extends Component {
+class AuthIndex extends Component {
 
 render() {
   return (
@@ -28,4 +28,4 @@ render() {
 }
 }
 
-export default TribesLanding
+export default AuthIndex

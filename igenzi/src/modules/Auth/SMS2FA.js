@@ -115,7 +115,7 @@ class SMS2FA extends Component {
         this.setState({ spinner: false });
         setTimeout(() => {
           Alert.alert('Success!', 'You have successfully verified your phone number') // TODO replace with toaster drop down
-          RootNavigation.navigate('TribesLanding')
+          RootNavigation.navigate('PinCode')
         }, 500);
 
       } catch (err) {
